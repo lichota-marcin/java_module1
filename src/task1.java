@@ -1,11 +1,10 @@
 import java.util.Scanner;
-import java.util.Arrays;
 
 public class task1 {
     public static void main(String[] args) {
-        isArraySortedAscending();
+        System.out.println(isArraySortedAscending());
     }
-    public static int[] array() {
+    public static int[] readArrayFromInput() {
         int n;
         Scanner sc = new Scanner(System.in);
         System.out.print("How many numbers should array contain: ");
@@ -17,10 +16,14 @@ public class task1 {
         }
         return array;
     }
-    public static void isArraySortedAscending() {
-        int[] unsortedArray = array();
-        int[] sortedArray = Arrays.copyOf(unsortedArray, unsortedArray.length);
-        Arrays.sort(sortedArray);
-        System.out.println(unsortedArray == sortedArray);
+    public static boolean isArraySortedAscending() {
+        boolean sorted=false;
+        int[] inputArray = readArrayFromInput();
+        for (int i= 0; i< inputArray.length-1; i++ ){
+            sorted = inputArray[i] <= inputArray[i+1];
+            if(!sorted){
+                break;}
+        }
+        return sorted;
     }
 }
