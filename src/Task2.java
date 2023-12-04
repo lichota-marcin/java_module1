@@ -1,4 +1,4 @@
-public class task2 {
+public class Task2 {
 
     //I decided to delete stringToArrayToArrayToString because it was faulty and recommended fix would make it similar
     // to stringToArrayAndBackToString method

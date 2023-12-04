@@ -1,4 +1,4 @@
-public class task3 {
+public class Task3 {
 
     static class Person {
         private String name;
@@ -27,7 +27,7 @@ public class task3 {
     }
 
     static class MakingChanges {
-        public void changeIdentities(Person p1, Person p2) {
+        public static void changeIdentities(Person p1, Person p2) {
             int temp1 = p1.getAge();
             String temp2 = p1.getName();
             p1.setAge(p2.getAge());
@@ -42,8 +42,7 @@ public class task3 {
                 new Person("Ron", 45),
                 new Person("Leslie", 40)
         };
-        MakingChanges changer = new MakingChanges();
-        changer.changeIdentities(people[0],people[1]);
+        MakingChanges.changeIdentities(people[0],people[1]);
         System.out.println("Ron's new name: "+people[0].getName());
         System.out.println("Ron's new age: "+people[0].getAge());
 
